@@ -1,0 +1,346 @@
+#screen {}
+
+
+/*--------------------- menu_background---------------------*/
+
+#menu_background {
+    background-image: url("grafik/start.svg");
+    background-size: cover;
+    width: 90vw;
+    height: 160vw;
+    margin: auto;
+    position: relative;
+}
+
+#play {
+    background-image: url("grafik/playbutton.svg");
+    background-size: 100%;
+    width: 25vw;
+    height: 25vw;
+    left: 32vw;
+    top: 115vw;
+    position: absolute;
+}
+
+#setting1 {
+    background-image: url("grafik/settingsicon.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 74vw;
+    top: 2vw;
+    position: absolute;
+}
+
+/*
+
+
+#setting_open1 {
+    background-image: url("grafik/settings.svg");
+    background-size: 100%;
+    width: 90vw;
+    height: 90vw;
+    left: 1.5vw;
+    top: 30vw;
+    position: absolute;
+}
+
+
+#switchicon1_1 {
+    background-image: url("grafik/switchicon1.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 41vw;
+    position: absolute;
+}
+
+#switchicon2_1 {
+    background-image: url("grafik/switchicon2.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 53vw;
+    position: absolute;
+}
+
+#mute1 {
+    background-image: url("grafik/mute.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 28vw;
+    position: absolute;
+}
+
+#close1 {
+    background-image: url("grafik/close.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 68vw;
+    top: 6vw;
+    position: absolute;
+}
+*/
+
+
+/*--------------------- game_background---------------------*/
+
+
+#game_background {
+    background-image: url("grafik/game.svg");
+    background-size: cover;
+    width: 90vw;
+    height: 160vw;
+    margin: auto;
+    position: relative;
+}
+
+#cheese {
+    background-image: url("grafik/cheese.svg");
+    background-size: 100%;
+    width: 30vw;
+    height: 20vw;
+    left: 57vw;
+    top: 71vw;
+    position: absolute;
+}
+
+#cat {
+    background-image: url("grafik/cat.svg");
+    background-size: 100%;
+    width: 30vw;
+    height: 25vw;
+    left: 3vw;
+    top: 100vw;
+    position: absolute;
+}
+
+
+
+#energy1 {
+    background-image: url("grafik/heart.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 2vw;
+    top: 145vw;
+    position: absolute;
+
+}
+
+#energy2 {
+    background-image: url("grafik/heart.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 17vw;
+    top: 145vw;
+    position: absolute;
+}
+
+#energy3 {
+    background-image: url("grafik/heart.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 32vw;
+    top: 145vw;
+    position: absolute;
+}
+
+#clock {
+    background-image: url("grafik/clock.svg");
+    background-size: 100%;
+    width: 17vw;
+    height: 17vw;
+    left: 2vw;
+    top: 2vw;
+    position: absolute;
+
+}
+
+#arrow {
+    background-image: url("grafik/arrow.svg");
+    background-size: 100%;
+    width: 4vw;
+    height: 7vw;
+    left: 8.4vw;
+    top: 4.3vw;
+    position: absolute;
+
+}
+
+#retry {
+    background-image: url("grafik/retry.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 60vw;
+    top: 2vw;
+    position: absolute;
+
+}
+
+
+#setting2 {
+    background-image: url("grafik/settingsicon.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 74vw;
+    top: 2vw;
+    position: absolute;
+}
+
+/*
+#setting_open1 {
+    background-image: url("grafik/settings.svg");
+    background-size: 100%;
+    width: 90vw;
+    height: 90vw;
+    left: 1.5vw;
+    top: 30vw;
+    position: absolute;
+}
+
+#setting_open2 {
+    background-image: url("grafik/settings.svg");
+    background-size: 100%;
+    width: 90vw;
+    height: 90vw;
+    left: 1.5vw;
+    top: 30vw;
+    position: absolute;
+}
+
+#switchicon1_2 {
+    background-image: url("grafik/switchicon1.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 41vw;
+    position: absolute;
+}
+
+#switchicon2_2 {
+    background-image: url("grafik/switchicon2.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 53vw;
+    position: absolute;
+}
+
+#mute2 {
+    background-image: url("grafik/mute.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 28vw;
+    position: absolute;
+}
+
+#close2 {
+    background-image: url("grafik/close.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 68vw;
+    top: 6vw;
+    position: absolute;
+}
+*/
+
+/* ------------------------ gameover-----------------------*/
+#gameover_background {
+    background-image: url("grafik/gameover.svg");
+    background-size: cover;
+    width: 90vw;
+    height: 160vw;
+    margin: auto;
+    position: relative;
+}
+
+#retrytxt {
+    background-image: url("grafik/retrytxt.svg");
+    background-size: 100%;
+    width: 25vw;
+    height: 15vw;
+    left: 50vw;
+    top: 90vw;
+    position: absolute;
+    z-index: 1;
+}
+
+
+
+#setting3 {
+    background-image: url("grafik/settingsicon.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 74vw;
+    top: 2vw;
+    position: absolute;
+}
+
+/*
+#setting_open3 {
+    background-image: url("grafik/settings.svg");
+    background-size: 100%;
+    width: 90vw;
+    height: 90vw;
+    left: 1.5vw;
+    top: 30vw;
+    position: absolute;
+     z-index: 2;
+}
+
+#switchicon1_3 {
+    background-image: url("grafik/switchicon1.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 41vw;
+    position: absolute;
+}
+
+#switchicon2_3 {
+    background-image: url("grafik/switchicon2.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 53vw;
+    position: absolute;
+}
+
+#mute3 {
+    background-image: url("grafik/mute.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 28vw;
+    position: absolute;
+}
+
+#close3 {
+    background-image: url("grafik/close.svg");
+    background-size: 100%;
+    width: 15vw;
+    height: 15vw;
+    left: 68vw;
+    top: 6vw;
+    position: absolute;
+}
+*/

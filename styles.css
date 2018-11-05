@@ -2,8 +2,137 @@
     position: relative;
     width: 100vw;
     height: 177.78vw;
+    overflow: hidden;
+
+    /*  touch-action: none;*/
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    user-select: none;
 
 }
+
+body {
+    margin: 0;
+}
+
+
+
+/*---------------------- effekter ---------------------*/
+
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
+}
+
+.blur {
+    filter: blur(5px) brightness(80%);
+}
+
+
+.fade_out {
+    animation-name: fadeout_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout_kf {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+.pulse {
+    animation-name: pulse_kf;
+    animation-duration: 0.7s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in;
+}
+
+
+@keyframes pulse_kf {
+    0% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+
+
+.slide {
+    animation-name: slide_kf;
+    animation-duration: 1.5s;
+    animation-iteration-count: 1;
+}
+
+@keyframes slide_kf {
+
+    0%,
+    100% {
+        transform: translateX(7vw);
+    }
+
+    50% {
+        transform: translateX(0vw);
+    }
+}
+
+
+
+
+.up_down {
+    animation-name: up_down_kf;
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes up_down_kf {
+
+    0%,
+    100% {
+        transform: translateY(17vw);
+    }
+
+    50% {
+        transform: translateY(0vw);
+    }
+}
+
+
+
+
+
+.dissappear {
+    animation-name: dissappear_kf;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: cubic-bezier(.59, -0.56, .77, 1.34);
+    animation-fill-mode: forwards;
+}
+
+@keyframes dissappear_kf {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(0);
+    }
+}
+
 
 
 /*--------------------- settings---------------------*/
@@ -18,10 +147,8 @@
     position: absolute;
 }
 
-
-/*
 #setting_open {
-    background-image: url("grafik/settings.svg");
+    background-image: url("grafik/setting.svg");
     background-size: 100%;
     width: 90vw;
     height: 90vw;
@@ -30,35 +157,49 @@
     position: absolute;
 }
 
-#switchicon1 {
-    background-image: url("grafik/switchicon1.svg");
+#switchbox1 {
+    background-image: url("grafik/switchbox.svg");
     background-size: 100%;
     width: 20vw;
     height: 20vw;
     left: 55vw;
-    top: 41vw;
+    top: 30vw;
     position: absolute;
 }
 
-#switchicon2 {
-    background-image: url("grafik/switchicon2.svg");
+#switch1 {
+    background-image: url("grafik/switch.svg");
     background-size: 100%;
     width: 20vw;
     height: 20vw;
     left: 55vw;
-    top: 53vw;
+    top: 30vw;
     position: absolute;
 }
 
-#mute {
-    background-image: url("grafik/mute.svg");
+#switchbox2 {
+    background-image: url("grafik/switchbox.svg");
     background-size: 100%;
     width: 20vw;
     height: 20vw;
     left: 55vw;
-    top: 28vw;
+    top: 43vw;
     position: absolute;
 }
+
+#switch2 {
+    background-image: url("grafik/switch.svg");
+    background-size: 100%;
+    width: 20vw;
+    height: 20vw;
+    left: 55vw;
+    top: 43vw;
+    position: absolute;
+}
+
+
+
+
 
 #close {
     background-image: url("grafik/close.svg");
@@ -69,18 +210,18 @@
     top: 6vw;
     position: absolute;
 }
-*/
+
 
 
 
 
 /*--------------------- START ---------------------*/
 
-/*
-#menu_background {
+#start {
 
     background-image: url("grafik/start.svg");
-    background-size: cover;
+    background-color: rgba(240, 248, 255, 0.75);
+    background-size: 100%;
     width: 100vw;
     height: 177.78vw;
     margin: auto;
@@ -92,11 +233,10 @@
     background-size: 100%;
     width: 25vw;
     height: 25vw;
-    left: 32vw;
-    top: 115vw;
+    left: 36vw;
+    top: 125vw;
     position: absolute;
 }
-*/
 
 
 
@@ -120,214 +260,164 @@
     position: relative;
 }
 
+
+
+#score {
+    color: pink;
+    position: absolute;
+    font-family: 'Sigmar One', cursive;
+    top: 165vw;
+    left: 78vw;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+
+
+#energy {
+    position: absolute;
+    top: 164vw;
+    left: 3vw;
+    display: flex;
+    justify-content: flex-start;
+    */
+}
+
+.heart {
+    width: 13vw;
+    height: 13vw;
+    background-image: url("grafik/heart.svg");
+    background-size: 100%;
+    margin-right: 0.9vw;
+}
+
 /*--------------------- game element---------------------*/
 
-/*-----------cheese-----------*/
-#cheese1 {
+/*cat*/
+.type1 {
+    position: absolute;
+    width: 18vw;
+    height: 24vw;
+    background-image: url("grafik/cat.svg");
+    background-size: 100%;
+    cursor: pointer;
+}
+
+/*cheese*/
+.type2 {
+    position: absolute;
+    width: 18vw;
+    height: 24vw;
     background-image: url("grafik/cheese.svg");
     background-size: 100%;
+    cursor: pointer;
+}
+
+
+
+/*----  1 ----*/
+
+.box1 {
     width: 25vw;
     height: 17vw;
+    top: 56vw;
     left: 12.5vw;
-    top: 56vw;
-    position: absolute;
+    overflow: hidden;
+
 }
 
-#cheese2 {
-    background-image: url("grafik/cheese.svg");
-    background-size: 100%;
+
+/*----  2 ----*/
+
+.box2 {
     width: 25vw;
     height: 17vw;
-    left: 36.5vw;
     top: 56vw;
-    position: absolute;
+    left: 36vw;
+    overflow: hidden;
 }
 
-#cheese3 {
-    background-image: url("grafik/cheese.svg");
-    background-size: 100%;
+
+
+/*----  3 ----*/
+
+.box3 {
     width: 25vw;
     height: 17vw;
-    left: 60.5vw;
     top: 56vw;
-    position: absolute;
+    left: 61vw;
+    overflow: hidden;
 }
 
-#cheese4 {
-    background-image: url("grafik/cheese.svg");
-    background-size: 100%;
-    width: 30vw;
+
+/*----  4 ----*/
+
+.box4 {
+    width: 25vw;
+    height: 17vw;
+    top: 86vw;
+    left: 10vw;
+    overflow: hidden;
+}
+
+
+/*----  5 ----*/
+
+.box5 {
+    width: 25vw;
+    height: 17vw;
+    top: 86vw;
+    left: 37vw;
+    overflow: hidden;
+}
+
+
+
+/*----  6 ----*/
+
+.box6 {
+    width: 25vw;
+    height: 17vw;
+    top: 86vw;
+    left: 63vw;
+    overflow: hidden;
+}
+
+
+
+/*----  7 ----*/
+
+.box7 {
+    width: 25vw;
     height: 20vw;
+    top: 124vw;
     left: 8vw;
-    top: 84vw;
-    position: absolute;
+    overflow: hidden;
 }
 
-#cheese5 {
-    background-image: url("grafik/cheese.svg");
-    background-size: 100%;
-    width: 30vw;
+
+/*----  8 ----*/
+
+.box8 {
+    width: 25vw;
     height: 20vw;
-    left: 34vw;
-    top: 84vw;
-    position: absolute;
+    top: 124vw;
+    left: 36.5vw;
+    overflow: hidden;
 }
 
-#cheese6 {
-    background-image: url("grafik/cheese.svg");
-    background-size: 100%;
-    width: 30vw;
+
+
+/*----  9 ----*/
+
+.box9 {
+    width: 25vw;
     height: 20vw;
-    left: 61vw;
-    top: 84vw;
-    position: absolute;
+    top: 124vw;
+    left: 65vw;
+    overflow: hidden;
 }
 
-#cheese7 {
-    background-image: url("grafik/cheese.svg");
-    background-size: 100%;
-    width: 33vw;
-    height: 23vw;
-    left: 4vw;
-    top: 122vw;
-    position: absolute;
-}
-
-#cheese8 {
-    background-image: url("grafik/cheese.svg");
-    background-size: 100%;
-    width: 33vw;
-    height: 23vw;
-    left: 33vw;
-    top: 122vw;
-    position: absolute;
-}
-
-#cheese9 {
-    background-image: url("grafik/cheese.svg");
-    background-size: 100%;
-    width: 33vw;
-    height: 23vw;
-    left: 61vw;
-    top: 122vw;
-    position: absolute;
-}
-
-/*-----------cat-----------*/
-#cat1 {
-    background-image: url("grafik/cat.svg");
-    background-size: 100%;
-    width: 30vw;
-    height: 25vw;
-    left: 11vw;
-    top: 55vw;
-    position: absolute;
-}
-
-#cat2 {
-    background-image: url("grafik/cat.svg");
-    background-size: 100%;
-    width: 30vw;
-    height: 25vw;
-    left: 35vw;
-    top: 55vw;
-    position: absolute;
-}
-
-#cat3 {
-    background-image: url("grafik/cat.svg");
-    background-size: 100%;
-    width: 30vw;
-    height: 25vw;
-    left: 59vw;
-    top: 55vw;
-    position: absolute;
-}
-
-#cat4 {
-    background-image: url("grafik/cat.svg");
-    background-size: 100%;
-    width: 33vw;
-    height: 25vw;
-    left: 7vw;
-    top: 85vw;
-    position: absolute;
-}
-
-#cat5 {
-    background-image: url("grafik/cat.svg");
-    background-size: 100%;
-    width: 33vw;
-    height: 25vw;
-    left: 34vw;
-    top: 85vw;
-    position: absolute;
-}
-
-#cat6 {
-    background-image: url("grafik/cat.svg");
-    background-size: 100%;
-    width: 33vw;
-    height: 25vw;
-    left: 61vw;
-    top: 85vw;
-    position: absolute;
-}
-
-#cat7 {
-    background-image: url("grafik/cat.svg");
-    background-size: 100%;
-    width: 36vw;
-    height: 27vw;
-    left: 4vw;
-    top: 125vw;
-    position: absolute;
-}
-
-#cat8 {
-    background-image: url("grafik/cat.svg");
-    background-size: 100%;
-    width: 36vw;
-    height: 27vw;
-    left: 33vw;
-    top: 125vw;
-    position: absolute;
-}
-
-#cat9 {
-    background-image: url("grafik/cat.svg");
-    background-size: 100%;
-    width: 36vw;
-    height: 27vw;
-    left: 61vw;
-    top: 125vw;
-    position: absolute;
-}
-
-
-
-.up_down {
-    animation-name: up_down_kf;
-    animation-duration: 1.5s;
-    animation-iteration-count: infinite;
-
-
-}
-
-
-@keyframes up_down_kf {
-
-    0%,
-    100% {
-        transform: translateY(15vw);
-    }
-
-    50% {
-        transform: translateY(0vw);
-    }
-
-
-}
 
 
 
@@ -518,13 +608,13 @@
 
 
 /* ------------------------ GAMEOVER-----------------------*/
-/*
+
 #gameover {
     position: absolute;
 }
 
 #gameover_background {
-    background-image: url("grafik/gameover.svg");
+    background-image: url("grafik/game_over.svg");
     background-size: cover;
     width: 100vw;
     height: 177.78vw;
@@ -542,4 +632,31 @@
     position: absolute;
     z-index: 1;
 }
-*/
+
+
+
+
+/* ------------------------ VICTORY ------------------------*/
+#victory {
+    position: absolute;
+}
+
+#victory_background {
+    background-image: url("grafik/victory.svg");
+    background-size: cover;
+    width: 100vw;
+    height: 177.78vw;
+    margin: auto;
+
+}
+
+#retrytxt {
+    background-image: url("grafik/retrytxt.svg");
+    background-size: 100%;
+    width: 25vw;
+    height: 15vw;
+    left: 50vw;
+    top: 90vw;
+    position: absolute;
+    z-index: 1;
+}

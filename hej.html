@@ -1,0 +1,125 @@
+window.addEventListener("load", sidenVises);
+
+let score = 0;
+
+function sidenVises() {
+console.log("siden vises");
+showStart();
+}
+
+
+
+
+function showStart() {
+console.log("show start");
+document.querySelector("#start").classList.remove("hide");
+
+document.querySelector("#play").classList.add("pulse");
+document.querySelector("#play").addEventListener("click", hideStart);
+document.querySelector("#setting").addEventListener("click", showSettingOpen);
+
+}
+
+function hideStart() {
+console.log("hide start")
+document.querySelector("#play").removeEventListener("click", hideStart);
+document.querySelector("#play").classList.remove("pulse");
+
+document.querySelector("#start").classList.add("fade_out");
+document.querySelector("#start").addEventListener("animationend", startGame);
+
+}
+
+function startGame() {
+console.log("start game");
+document.querySelector("#score").innerHTML = ": " + score;
+document.querySelector("#start").removeEventListener("animationend", startGame);
+document.querySelector("#start").classList.remove("fade_out");
+
+
+document.querySelector("#start").classList.add("hide");
+
+document.querySelector("#cheese1").addEventListener("click", clickCheese);
+document.querySelector("#cheese2").addEventListener("click", clickCheese);
+document.querySelector("#cheese3").addEventListener("click", clickCheese);
+document.querySelector("#cheese4").addEventListener("click", clickCheese);
+document.querySelector("#cheese5").addEventListener("click", clickCheese);
+document.querySelector("#cheese6").addEventListener("click", clickCheese);
+document.querySelector("#cheese7").addEventListener("click", clickCheese);
+document.querySelector("#cheese8").addEventListener("click", clickCheese);
+document.querySelector("#cheese9").addEventListener("click", clickCheese);
+document.querySelector("#cat1").addEventListener("click", clickCat);
+document.querySelector("#cat2").addEventListener("click", clickCat);
+document.querySelector("#cat3").addEventListener("click", clickCat);
+document.querySelector("#cat4").addEventListener("click", clickCat);
+document.querySelector("#cat5").addEventListener("click", clickCat);
+document.querySelector("#cat6").addEventListener("click", clickCat);
+document.querySelector("#cat7").addEventListener("click", clickCat);
+document.querySelector("#cat8").addEventListener("click", clickCat);
+document.querySelector("#cat9").addEventListener("click", clickCat);
+}
+
+function clickCheese() {
+console.log("Cheese");
+//andre måder at skrive det på:
+//score = score + 1;
+//score += 1;
+score++;
+
+document.querySelector("#score").innerHTML = ": " + score;
+
+console.log(this);
+this.classList.add("hide");
+this.removeEventListener("click", clickCheese);
+
+}
+
+function clickCat() {
+console.log("cat");
+score = score - 3;
+
+console.log(this);
+this.classList.add("hide");
+this.removeEventListener("click", clickCat);
+
+
+document.querySelector("#score").innerHTML = ": " + score;
+}
+
+
+
+
+
+
+
+function showSettingOpen() {
+console.log("show setting_open");
+document.querySelector("#setting_open").classList.remove("hide");
+document.querySelector("#close").addEventListener("click", hideSettingOpen);
+
+document.querySelector("#switch1").addEventListener("click", showSwitch1);
+document.querySelector("#switch2").addEventListener("click", showSwitch2);
+
+}
+
+function hideSettingOpen() {
+console.log("hide setting_open");
+document.querySelector("#setting_open").classList.add("hide");
+
+
+}
+
+
+function showSwitch1() {
+console.log("slide switch1");
+document.querySelector("#switch1").classList.add("slide");
+
+}
+
+function showSwitch2() {
+console.log("slide switch2");
+document.querySelector("#switch2").classList.add("slide");
+
+}
+
+//husk at fjern animationen af switch

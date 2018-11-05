@@ -1,11 +1,12 @@
 <!DOCTYPE html>
-<html lang="da">
+<html lang="en">
 
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cheese Please?</title>
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Sigmar+One" rel="stylesheet">
 </head>
 
 <body>
@@ -14,36 +15,19 @@
 
 
 
-
-        <div id="menu_background">
-            <div id="play"></div>
-
-        </div>
-
-
         <div id=game>
             <div id="game_background">
 
                 <div id="game_elements">
-                    <div id="cat1" class="up_down"></div>
-                    <div id="cat2" class="up_down"></div>
-                    <div id="cat3" class="up_down"></div>
-                    <div id="cat4" class="up_down"></div>
-                    <div id="cat5" class="up_down"></div>
-                    <div id="cat6" class="up_down"></div>
-                    <div id="cat7" class="up_down"></div>
-                    <div id="cat8" class="up_down"></div>
-                    <div id="cat9" class="up_down"></div>
 
-                    <div id="cheese1" class="up_down"></div>
-                    <div id="cheese2" class="up_down"></div>
-                    <div id="cheese3" class="up_down"></div>
-                    <div id="cheese4" class="up_down"></div>
-                    <div id="cheese5" class="up_down"></div>
-                    <div id="cheese6" class="up_down"></div>
-                    <div id="cheese7" class="up_down"></div>
-                    <div id="cheese8" class="up_down"></div>
-                    <div id="cheese9" class="up_down"></div>
+
+                    <div id="element1" class="type2 box1"></div>
+                    <div id="element2" class="type2 box6"></div>
+                    <div id="element3" class="type2 box8"></div>
+
+
+
+
 
                     <div id="tube1"></div>
                     <div id="tube2"></div>
@@ -57,11 +41,17 @@
 
                 </div>
 
+
                 <div id="game_ui">
-                    <div id="points"></div>
-                    <div id="energy1"></div>
-                    <div id="energy2"></div>
-                    <div id="energy3"></div>
+
+
+                    <div id="energy">
+                        <div id="heart1" class="heart"></div>
+                        <div id="heart2" class="heart"></div>
+                        <div id="heart3" class="heart"></div>
+                    </div>
+
+
                     <div id="clock"></div>
                     <div id="arrow" class="roter"></div>
 
@@ -73,30 +63,49 @@
             </div>
         </div>
 
+        <div id="start" class="hide">
+            <div id="play"></div>
 
-        <div id="gameover">
+        </div>
+
+
+        <div id="gameover" class="hide">
             <div id="gameover_background">
                 <div id="retry"></div>
 
-                    <div id="retrytxt"></div>
+                <div id="retrytxt"></div>
 
 
             </div>
 
         </div>
 
-    <div id="setting"></div>
-                    <div id="setting_open">
-                        <div id="mute"></div>
-                        <div id="switchicon1"></div>
-                        <div id="switchicon2"></div>
-                        <div id="close"></div>
-                    </div>
+        <div id="victory" class="hide">
+            <div id="victory_background"></div>
+            <div id="retry"></div>
+
+            <div id="retrytxt"></div>
+
+
+        </div>
+
+
+        <div id="setting_open" class="hide">
+            <div id="sound"></div>
+            <div id="mute"></div>
+            <div id="switchbox1"></div>
+            <div id="switch1"></div>
+            <div id="switchbox2"></div>
+            <div id="switch2"></div>
+            <div id="close"></div>
+        </div>
+        <div id="setting"></div>
 
     </div>
 
+    <div id="score"></div>
 
-
+    <script src="script.js"></script>
 
 </body>
 

@@ -14,6 +14,7 @@ function sidenVises() {
 
 
 
+
 function showStart() {
     console.log("show start");
     document.querySelector("#start").classList.remove("hide");
@@ -39,10 +40,21 @@ function startGame() {
     document.querySelector("#element1").classList.add("up_down");
     document.querySelector("#element2").classList.add("up_down");
     document.querySelector("#element3").classList.add("up_down");
-    axegt5 ju7o.pæ-åø*^
+    document.querySelector("#element4").classList.add("up_down");
+    document.querySelector("#element5").classList.add("up_down");
+    document.querySelector("#element6").classList.add("up_down");
+    document.querySelector("#element7").classList.add("up_down");
+    document.querySelector("#element8").classList.add("up_down");
+    document.querySelector("#element9").classList.add("up_down");
     document.querySelector("#element1").addEventListener("click", clickElement);
     document.querySelector("#element2").addEventListener("click", clickElement);
     document.querySelector("#element3").addEventListener("click", clickElement);
+    document.querySelector("#element4").addEventListener("click", clickElement);
+    document.querySelector("#element5").addEventListener("click", clickElement);
+    document.querySelector("#element6").addEventListener("click", clickElement);
+    document.querySelector("#element7").addEventListener("click", clickElement);
+    document.querySelector("#element8").addEventListener("click", clickElement);
+    document.querySelector("#element9").addEventListener("click", clickElement);
 
 
 
@@ -82,7 +94,17 @@ function newElement() {
     console.log("new element");
     this.className = "";
     this.classList.add("type" + Math.floor((Math.random() * 2) + 1));
-    this.classList.add("box" + Math.floor((Math.random() * 9) + 1));
+    this.classList.add("position" + Math.floor((Math.random() * 9) + 1));
+    document.querySelector("#element1").classList.add("up_down");
+    document.querySelector("#element2").classList.add("up_down");
+    document.querySelector("#element3").classList.add("up_down");
+    document.querySelector("#element4").classList.add("up_down");
+    document.querySelector("#element5").classList.add("up_down");
+    document.querySelector("#element6").classList.add("up_down");
+    document.querySelector("#element7").classList.add("up_down");
+    document.querySelector("#element8").classList.add("up_down");
+    document.querySelector("#element9").classList.add("up_down");
+
 }
 
 function gameStatus() {
@@ -106,22 +128,6 @@ function gameOver() {
 function levelCompleted() {
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

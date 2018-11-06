@@ -315,109 +315,136 @@ body {
 
 
 
-/*----  1 ----*/
+/*----  BOX ----*/
 
-.box1 {
+#box1 {
     width: 25vw;
     height: 17vw;
     top: 56vw;
     left: 12.5vw;
     overflow: hidden;
-
+    position: absolute;
 }
 
-
-/*----  2 ----*/
-
-.box2 {
+#box2 {
     width: 25vw;
     height: 17vw;
     top: 56vw;
     left: 36vw;
     overflow: hidden;
+    position: absolute;
 }
 
-
-
-/*----  3 ----*/
-
-.box3 {
+#box3 {
     width: 25vw;
     height: 17vw;
     top: 56vw;
     left: 61vw;
     overflow: hidden;
+    position: absolute;
 }
 
-
-/*----  4 ----*/
-
-.box4 {
+#box4 {
     width: 25vw;
     height: 17vw;
-    top: 86vw;
+    top: 88vw;
     left: 10vw;
     overflow: hidden;
+    position: absolute;
 }
 
-
-/*----  5 ----*/
-
-.box5 {
+#box5 {
     width: 25vw;
     height: 17vw;
-    top: 86vw;
+    top: 88vw;
     left: 37vw;
     overflow: hidden;
+    position: absolute;
 }
 
-
-
-/*----  6 ----*/
-
-.box6 {
+#box6 {
     width: 25vw;
     height: 17vw;
-    top: 86vw;
+    top: 88vw;
     left: 63vw;
     overflow: hidden;
+    position: absolute;
 }
 
-
-
-/*----  7 ----*/
-
-.box7 {
+#box7 {
     width: 25vw;
     height: 20vw;
-    top: 124vw;
+    top: 128vw;
     left: 8vw;
     overflow: hidden;
+    position: absolute;
 }
 
-
-/*----  8 ----*/
-
-.box8 {
+#box8 {
     width: 25vw;
     height: 20vw;
-    top: 124vw;
+    top: 128vw;
     left: 36.5vw;
     overflow: hidden;
+    position: absolute;
 }
 
-
-
-/*----  9 ----*/
-
-.box9 {
+#box9 {
     width: 25vw;
     height: 20vw;
-    top: 124vw;
+    top: 128vw;
     left: 65vw;
     overflow: hidden;
+    position: absolute;
 }
 
+
+/*----  POSITION ----*/
+
+.position1 {
+    width: 25vw;
+    height: 17vw;
+}
+
+.position2 {
+    width: 25vw;
+    height: 17vw;
+}
+
+.position3 {
+    width: 25vw;
+    height: 17vw;
+}
+
+.position4 {
+    width: 25vw;
+    height: 17vw;
+}
+
+.position5 {
+    width: 25vw;
+    height: 17vw;
+}
+
+.position6 {
+    width: 25vw;
+    height: 17vw;
+}
+
+.position7 {
+    width: 25vw;
+    height: 20vw;
+}
+
+.position8 {
+    width: 25vw;
+    height: 20vw;
+}
+
+.position9 {
+    width: 25vw;
+    height: 20vw;
+}
 
 
 

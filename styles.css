@@ -17,7 +17,7 @@ body {
 
 
 
-/*---------------------- effekter ---------------------*/
+/*--------------------------------------------------------------   effekter ---------------------*/
 
 .hide {
     visibility: hidden;
@@ -28,7 +28,7 @@ body {
 }
 
 .blur {
-    filter: blur(5px) brightness(80%);
+    filter: blur(2px) brightness(90%);
 }
 
 
@@ -48,6 +48,8 @@ body {
         opacity: 0;
     }
 }
+
+
 
 .pulse {
     animation-name: pulse_kf;
@@ -135,9 +137,9 @@ body {
 
 
 
-/*--------------------- settings---------------------*/
+/*-------------------------------------------------------------   settings---------------------*/
 
-#setting {
+#settings {
     background-image: url("grafik/settingsicon.svg");
     background-size: 100%;
     width: 15vw;
@@ -145,9 +147,11 @@ body {
     left: 83vw;
     top: 1vw;
     position: absolute;
+
+    cursor: pointer;
 }
 
-#setting_open {
+#settings_open {
     background-image: url("grafik/setting.svg");
     background-size: 100%;
     width: 90vw;
@@ -157,45 +161,6 @@ body {
     position: absolute;
 }
 
-#switchbox1 {
-    background-image: url("grafik/switchbox.svg");
-    background-size: 100%;
-    width: 20vw;
-    height: 20vw;
-    left: 55vw;
-    top: 30vw;
-    position: absolute;
-}
-
-#switch1 {
-    background-image: url("grafik/switch.svg");
-    background-size: 100%;
-    width: 20vw;
-    height: 20vw;
-    left: 55vw;
-    top: 30vw;
-    position: absolute;
-}
-
-#switchbox2 {
-    background-image: url("grafik/switchbox.svg");
-    background-size: 100%;
-    width: 20vw;
-    height: 20vw;
-    left: 55vw;
-    top: 43vw;
-    position: absolute;
-}
-
-#switch2 {
-    background-image: url("grafik/switch.svg");
-    background-size: 100%;
-    width: 20vw;
-    height: 20vw;
-    left: 55vw;
-    top: 43vw;
-    position: absolute;
-}
 
 
 
@@ -209,13 +174,87 @@ body {
     left: 68vw;
     top: 6vw;
     position: absolute;
+
+    cursor: pointer;
+}
+
+
+
+
+/*-------------------------------------------------------------   toggle ---------------------*/
+
+
+#sfx {
+    position: absolute;
+    top: 31vw;
+    left: 56vw;
+
+    cursor: pointer;
+}
+
+#music {
+    position: absolute;
+    top: 44vw;
+    left: 56vw;
+
+    cursor: pointer;
+}
+
+
+#sfx_sprite,
+#music_sprite {
+    background-size: 500% 100%;
+    width: 17vw;
+    height: 17vw;
+    background-image: url(sprite/switch_sprite.svg);
+
+}
+
+
+.on {
+    background-position: 0;
+    /*    background-color: green;*/
+}
+
+.off {
+    background-position: -400% 0;
+    /*    background-color: red;*/
+}
+
+
+
+.off_on {
+    animation-name: on_off_kf;
+    animation-direction: reverse;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: steps(4);
+}
+
+.on_off {
+    animation-name: on_off_kf;
+    animation-duration: 0.2s;
+    animation-iteration-count: 1;
+    animation-fill-mode: both;
+    animation-timing-function: steps(4);
+}
+
+@keyframes on_off_kf {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -400% 0;
+    }
 }
 
 
 
 
 
-/*--------------------- START ---------------------*/
+/*-------------------------------------------------------------  START ---------------------*/
 
 #start {
 
@@ -236,6 +275,8 @@ body {
     left: 36vw;
     top: 125vw;
     position: absolute;
+
+    cursor: pointer;
 }
 
 
@@ -243,7 +284,7 @@ body {
 
 
 
-/*--------------------- GAME ---------------------*/
+/*-------------------------------------------------------------  GAME ---------------------*/
 
 #game {
     position: absolute;
@@ -291,7 +332,7 @@ body {
     margin-right: 0.9vw;
 }
 
-/*--------------------- game element---------------------*/
+/*------------------------------------------------------------- game element---------------------*/
 
 /*cat*/
 .type1 {
@@ -315,7 +356,7 @@ body {
 
 
 
-/*----  BOX ----*/
+/*------------------------ BOX ----*/
 
 #box1 {
     width: 25vw;
@@ -399,7 +440,7 @@ body {
 }
 
 
-/*----  POSITION ----*/
+/*------------------------   POSITION ----*/
 
 .position1 {
     width: 25vw;
@@ -450,7 +491,7 @@ body {
 
 
 
-/*-----------tube-----------*/
+/*------------------------ tube-----------*/
 #tube1 {
     background-image: url("grafik/tube.svg");
     background-size: 100%;
@@ -544,7 +585,7 @@ body {
 }
 
 
-/*--------------------- game UI---------------------*/
+/*-------------------------------------------------------------  game UI---------------------*/
 #energy1 {
     background-image: url("grafik/heart.svg");
     background-size: 100%;
@@ -628,13 +669,15 @@ body {
     top: 1vw;
     position: absolute;
 
+    cursor: pointer;
+
 }
 
 
 
 
 
-/* ------------------------ GAMEOVER-----------------------*/
+/* ----------------------------------------------------  GAMEOVER-----------------------*/
 
 #gameover {
     position: absolute;
@@ -649,7 +692,7 @@ body {
 
 }
 
-#retrytxt {
+#retrytxt1 {
     background-image: url("grafik/retrytxt.svg");
     background-size: 100%;
     width: 25vw;
@@ -658,12 +701,14 @@ body {
     top: 90vw;
     position: absolute;
     z-index: 1;
+
+    cursor: pointer;
 }
 
 
 
 
-/* ------------------------ VICTORY ------------------------*/
+/* --------------------------------------------------------  VICTORY -------------*/
 #victory {
     position: absolute;
 }
@@ -677,7 +722,7 @@ body {
 
 }
 
-#retrytxt {
+#retrytxt2 {
     background-image: url("grafik/retrytxt.svg");
     background-size: 100%;
     width: 25vw;
@@ -686,4 +731,6 @@ body {
     top: 90vw;
     position: absolute;
     z-index: 1;
+
+    cursor: pointer;
 }

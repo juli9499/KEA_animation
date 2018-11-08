@@ -15,14 +15,17 @@
 
 
 
+
+
+
+<!-------------------------------- GAME ---------------------------------->
+
         <div id=game>
             <div id="game_background">
 
+
+<!-------------------------------- GAME ELEMENTS ---------------------------------->
                 <div id="game_elements">
-
-
-
-
 
 
                     <div id="box1">
@@ -63,8 +66,6 @@
                     </div>
 
 
-
-
                     <div id="tube1"></div>
                     <div id="tube2"></div>
                     <div id="tube3"></div>
@@ -77,6 +78,7 @@
 
                 </div>
 
+<!-------------------------------- GAME UI ---------------------------------->
 
                 <div id="game_ui">
 
@@ -98,48 +100,93 @@
 
             </div>
         </div>
-
+<!-------------------------------- START ---------------------------------->
         <div id="start" class="hide">
             <div id="play"></div>
 
         </div>
 
-
+<!-------------------------------- GAME OVER ---------------------------------->
         <div id="gameover" class="hide">
             <div id="gameover_background">
-                <div id="retry"></div>
 
-                <div id="retrytxt"></div>
+                <div id="retrytxt1"></div>
 
 
             </div>
 
         </div>
-
+<!-------------------------------- VICTORY ---------------------------------->
         <div id="victory" class="hide">
             <div id="victory_background"></div>
-            <div id="retry"></div>
 
-            <div id="retrytxt"></div>
+
+            <div id="retrytxt2"></div>
 
 
         </div>
 
 
-        <div id="setting_open" class="hide">
-            <div id="sound"></div>
-            <div id="mute"></div>
-            <div id="switchbox1"></div>
-            <div id="switch1"></div>
-            <div id="switchbox2"></div>
-            <div id="switch2"></div>
+
+<!-------------------------------- SETTINGS ---------------------------------->
+
+
+        <div id="settings"></div>
+
+        <div id="settings_open" class="hide">
+
+            <div id="settings_sound_effects">
+                <div id="sfx" class="on">
+                    <div id="sfx_sprite"></div>
+                </div>
+            </div>
+
+            <div id="settings_music">
+                <div id="music" class="on">
+                    <div id="music_sprite"></div>
+                </div>
+            </div>
+
             <div id="close"></div>
+
         </div>
-        <div id="setting"></div>
+
+
+<!-------------------------------- SCORE ---------------------------------->
+
+        <div id="score"></div>
 
     </div>
 
-    <div id="score"></div>
+
+
+
+
+<!-------------------------------- SOUND ---------------------------------->
+
+
+    <audio id="musik">
+        <source src="music/Mr_Tea.mp3" type="audio/mpeg">
+    </audio>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     <script src="script.js"></script>
 

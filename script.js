@@ -5,6 +5,7 @@ window.addEventListener("load", sidenVises);
 let score = 0;
 let life = 3;
 
+
 let showSettingsEffektSound = true;
 let showSettingsMusic = true;
 
@@ -15,6 +16,7 @@ function sidenVises() {
     showStart();
 
     document.querySelector("#settings_music").addEventListener("click", toggleMusic);
+    document.querySelector("#settings_sound_effects").addEventListener("click", toggleSounds);
 
 }
 
@@ -32,6 +34,7 @@ function hideStart() {
     console.log("hide start")
     document.querySelector("#play").removeEventListener("click", hideStart);
     document.querySelector("#play").classList.remove("pulse");
+    document.querySelector("#pop").play();
 
     document.querySelector("#start").classList.add("fade_out");
     document.querySelector("#start").addEventListener("animationend", startGame);
@@ -72,11 +75,12 @@ function startGame() {
     document.querySelector("#element9").addEventListener("click", clickElement);
 
     document.querySelector("#musik").play();
+    document.querySelector("#musik").volume = 0.3;
     document.querySelector("#musik").loop = true;
 
 
 
-    document.querySelector("#score").innerHTML = ": " + score;
+    document.querySelector("#score1").innerHTML = ": " + score;
     document.querySelector("#start").removeEventListener("animationend", startGame);
     document.querySelector("#start").classList.remove("fade_out");
 
@@ -137,14 +141,20 @@ function clickElement() {
     console.log("click element");
 
     if (this.classList.contains("type1")) {
+        document.querySelector("#meow").currentTime = 0;
+        document.querySelector("#meow").play();
         console.log("type1");
         document.querySelector("#heart" + life).classList.add("hide");
         life--;
 
+
     } else if (this.classList.contains("type2")) {
+        document.querySelector("#haps").currentTime = 0;
+        document.querySelector("#haps").play();
         console.log("type2");
         score++;
-        document.querySelector("#score").innerHTML = score;
+        document.querySelector("#score1").innerHTML = score;
+
     }
 
     this.classList.add("dissappear");
@@ -156,7 +166,7 @@ function clickElement() {
 function newElement() {
     console.log("new element");
     this.className = "";
-    this.classList.add("type" + Math.floor((Math.random() * 2) + 1));
+    this.classList.add("type" + Math.floor((Math.random() * 3) + 1));
     this.classList.add("position" + Math.floor((Math.random() * 9) + 1));
     document.querySelector("#element1").classList.add("up_down");
     document.querySelector("#element2").classList.add("up_down");
@@ -176,7 +186,7 @@ function gameStatus() {
     if (life == 0) {
         gameOver();
 
-    } else if (score == 50) {
+    } else if (score == 10) {
         levelCompleted();
     }
 
@@ -187,9 +197,14 @@ function gameOver() {
     console.log("gameOver");
     document.querySelector("#gameover").classList.remove("hide");
     document.querySelector("#game").classList.add("blur");
+
+    document.querySelector("#score1").classList.add("hide");
+    document.querySelector("#score2").innerHTML = " " + score;
+
     //document.querySelector("#game").addEventListener("animationend");
-    //document.querySelector("#score").addEventListener("animationend");
-    document.querySelector("#retrytxt").addEventListener("click", hideStart);
+    //document.querySelector("#score1").addEventListener("animationend");
+
+    document.querySelector("#retrytxt1").addEventListener("click", retry);
 
 }
 
@@ -197,7 +212,17 @@ function levelCompleted() {
     console.log("levelCompleted");
     document.querySelector("#victory").classList.remove("hide");
     document.querySelector("#game").classList.add("blur");
-    document.querySelector("#game").addEventListener("animationend");
+
+    document.querySelector("#score1").classList.add("hide");
+    document.querySelector("#score2").innerHTML = " " + score;
+
+    // document.querySelector("#game").addEventListener("animationend");
+    document.querySelector("#retrytxt2").addEventListener("click", retry);
+
+}
+
+function retry() {
+    console.log("retry");
 
 }
 
@@ -212,6 +237,8 @@ function levelCompleted() {
 function showSettingOpen() {
     console.log("show settings_open");
     document.querySelector("#settings_open").classList.remove("hide");
+    document.querySelector("#pop").currentTime = 0;
+    document.querySelector("#pop").play();
     document.querySelector("#close").addEventListener("click", hideSettingOpen);
 
 
@@ -219,6 +246,8 @@ function showSettingOpen() {
 
 function hideSettingOpen() {
     console.log("hide settings_open");
+    document.querySelector("#pop").currentTime = 0;
+    document.querySelector("#pop").play();
     document.querySelector("#settings_open").classList.add("hide");
 
 
@@ -279,6 +308,58 @@ function musicOn() {
 
     //document.querySelector("#musik").play();
 }
+
+
+
+
+
+
+
+
+
+function toggleSounds() {
+    console.log("toggleSounds");
+    //showSettingsEffektSound = !showSettingsEffektSound;
+
+    if (showSettingsEffektSound == false) {
+        //her klikker vi lyden på
+        showSettingsEffektSound = true;
+        document.querySelector("#sfx_sprite").classList.add("off_on");
+        document.querySelector("#sfx_sprite").classList.remove("off");
+        document.querySelector("#sfx_sprite").addEventListener("animationend", soundsOn);
+
+    } else {
+        //her klikker vi lyden af - slukker den
+        showSettingsEffektSound = false;
+        document.querySelector("#sfx_sprite").classList.add("on_off");
+        document.querySelector("#sfx_sprite").classList.remove("on");
+        document.querySelector("#sfx_sprite").addEventListener("animationend", soundsOff);
+    }
+}
+
+function soundsOff() {
+    console.log("soundsOff function værdi er " + showSettingsEffektSound);
+    document.querySelector("#sfx_sprite").removeEventListener("animationend", soundsOff);
+    document.querySelector("#sfx_sprite").classList.remove("on_off");
+    document.querySelector("#sfx_sprite").classList.add("off");
+    //    her slukkes for efx
+    document.querySelector("#pop").muted = true;
+    document.querySelector("#haps").muted = true;
+    document.querySelector("#meow").muted = true;
+
+}
+
+function soundsOn() {
+    console.log("soundsOn function værdi er " + showSettingsEffektSound);
+    document.querySelector("#sfx_sprite").removeEventListener("animationend", soundsOn);
+    document.querySelector("#sfx_sprite").classList.remove("off_on");
+    document.querySelector("#sfx_sprite").classList.add("on");
+    //    her tændes for efx
+    document.querySelector("#pop").muted = true;
+    document.querySelector("#haps").muted = true;
+    document.querySelector("#meow").muted = true;
+}
+
 
 
 

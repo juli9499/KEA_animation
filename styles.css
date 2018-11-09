@@ -302,8 +302,7 @@ body {
 }
 
 
-
-#score {
+#score1 {
     color: pink;
     position: absolute;
     font-family: 'Sigmar One', cursive;
@@ -312,6 +311,28 @@ body {
     font-size: 1.8rem;
     font-weight: 900;
 }
+
+#score2 {
+    color: #ff8ea2;
+    position: absolute;
+    font-family: 'Sigmar One', cursive;
+    top: 70vw;
+    left: 45vw;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+/*
+.score {
+    color: pink;
+    position: absolute;
+    font-family: 'Sigmar One', cursive;
+    top: 165vw;
+    left: 78vw;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+*/
 
 
 
@@ -353,6 +374,17 @@ body {
     background-size: 100%;
     cursor: pointer;
 }
+
+/*cheese*/
+.type3 {
+    position: absolute;
+    width: 18vw;
+    height: 24vw;
+    background-image: url("grafik/cheese.svg");
+    background-size: 100%;
+    cursor: pointer;
+}
+
 
 
 

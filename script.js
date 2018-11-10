@@ -163,6 +163,8 @@ function clickElement() {
     gameStatus();
 }
 
+
+
 function newElement() {
     console.log("new element");
     this.className = "";
@@ -257,10 +259,6 @@ function hideSettingOpen() {
 
 
 
-
-
-
-
 function toggleMusic() {
     console.log("showSettingsMusic function " + showSettingsMusic);
     showSettingsMusic = !showSettingsMusic;
@@ -308,8 +306,6 @@ function musicOn() {
 
     //document.querySelector("#musik").play();
 }
-
-
 
 
 
